@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "OsloBysykkel/1.0.0": {
+        "dependencies": {
+          "BikeshareClient": "3.2.5"
+        },
+        "runtime": {
+          "OsloBysykkel.dll": {}
+        }
+      },
+      "BikeshareClient/3.2.5": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/BikeshareClient.dll": {
+            "assemblyVersion": "3.2.5.0",
+            "fileVersion": "3.2.5.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OsloBysykkel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BikeshareClient/3.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mOrTo4FLQltppbcOtoHAJUgGrCLUEhzFI2g9FVfJ1Bd6U9CQ7M9KK9btd04FRz9zAfFHZ8ldZJKyBlKyV6I1mw==",
+      "path": "bikeshareclient/3.2.5",
+      "hashPath": "bikeshareclient.3.2.5.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    }
+  }
+}

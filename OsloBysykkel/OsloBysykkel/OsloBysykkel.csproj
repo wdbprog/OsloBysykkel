@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="BikeshareClient" Version="3.2.5" />
+  </ItemGroup>
+
 </Project>
