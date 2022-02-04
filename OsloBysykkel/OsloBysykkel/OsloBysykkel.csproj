@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="BikeshareClient" Version="3.2.5" />
+    <PackageReference Include="GeoJSON.Net" Version="1.2.19" />
   </ItemGroup>
 
 </Project>

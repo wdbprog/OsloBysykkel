@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "OsloBysykkel/1.0.0": {
         "dependencies": {
-          "BikeshareClient": "3.2.5"
+          "BikeshareClient": "3.2.5",
+          "GeoJSON.Net": "1.2.19"
         },
         "runtime": {
           "OsloBysykkel.dll": {}
@@ -22,6 +23,17 @@
           "lib/netstandard2.0/BikeshareClient.dll": {
             "assemblyVersion": "3.2.5.0",
             "fileVersion": "3.2.5.0"
+          }
+        }
+      },
+      "GeoJSON.Net/1.2.19": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.1/GeoJSON.Net.dll": {
+            "assemblyVersion": "1.2.16.0",
+            "fileVersion": "1.2.16.0"
           }
         }
       },
@@ -47,6 +59,13 @@
       "sha512": "sha512-mOrTo4FLQltppbcOtoHAJUgGrCLUEhzFI2g9FVfJ1Bd6U9CQ7M9KK9btd04FRz9zAfFHZ8ldZJKyBlKyV6I1mw==",
       "path": "bikeshareclient/3.2.5",
       "hashPath": "bikeshareclient.3.2.5.nupkg.sha512"
+    },
+    "GeoJSON.Net/1.2.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b1sIWezvF7a4dBz6d0nQfbwJEWFeRjJ6Mri+Hm/FJ1OIEksekiY1X+CgPG/7E3NcHKz3+3RnbX3VAhx03GG21w==",
+      "path": "geojson.net/1.2.19",
+      "hashPath": "geojson.net.1.2.19.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",

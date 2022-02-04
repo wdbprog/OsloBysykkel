@@ -14,6 +14,18 @@
           "lib/netstandard2.0/BikeshareClient.dll": {}
         }
       },
+      "GeoJSON.Net/1.2.19": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.1/GeoJSON.Net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/GeoJSON.Net.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -37,6 +49,24 @@
         "bikeshareclient.nuspec",
         "lib/netstandard2.0/BikeshareClient.dll",
         "lib/netstandard2.0/BikeshareClient.pdb"
+      ]
+    },
+    "GeoJSON.Net/1.2.19": {
+      "sha512": "b1sIWezvF7a4dBz6d0nQfbwJEWFeRjJ6Mri+Hm/FJ1OIEksekiY1X+CgPG/7E3NcHKz3+3RnbX3VAhx03GG21w==",
+      "type": "package",
+      "path": "geojson.net/1.2.19",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "geojson.net.1.2.19.nupkg.sha512",
+        "geojson.net.nuspec",
+        "lib/net35/GeoJSON.Net.dll",
+        "lib/net40/GeoJSON.Net.dll",
+        "lib/net45/GeoJSON.Net.dll",
+        "lib/netstandard1.0/GeoJSON.Net.dll",
+        "lib/netstandard1.1/GeoJSON.Net.dll",
+        "lib/netstandard2.0/GeoJSON.Net.dll",
+        "lib/netstandard2.1/GeoJSON.Net.dll"
       ]
     },
     "Newtonsoft.Json/12.0.3": {
@@ -73,7 +103,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "BikeshareClient >= 3.2.5"
+      "BikeshareClient >= 3.2.5",
+      "GeoJSON.Net >= 1.2.19"
     ]
   },
   "packageFolders": {
@@ -119,6 +150,10 @@
           "BikeshareClient": {
             "target": "Package",
             "version": "[3.2.5, )"
+          },
+          "GeoJSON.Net": {
+            "target": "Package",
+            "version": "[1.2.19, )"
           }
         },
         "imports": [

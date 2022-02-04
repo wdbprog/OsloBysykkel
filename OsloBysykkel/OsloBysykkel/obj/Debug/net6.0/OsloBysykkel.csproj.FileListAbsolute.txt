@@ -27,3 +27,4 @@ C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\obj\
 C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\ref\OsloBysykkel.dll
 C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.pdb
 C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.genruntimeconfig.cache
+C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\GeoJSON.Net.dll
