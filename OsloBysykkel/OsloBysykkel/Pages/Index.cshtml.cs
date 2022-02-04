@@ -2,7 +2,6 @@
 using BikeshareClient.Models;
 using GeoJSON.Net.Feature;
 using GeoJSON.Net.Geometry;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 

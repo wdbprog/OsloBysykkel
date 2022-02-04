@@ -16,3 +16,27 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.map {
+    width: 1000px;
+    height: 400px;
+}
+.marker {
+    /*background-image: url('mapbox-icon.png');*/
+    /*background-image: bi-bicycle;*/
+    background-color: grey;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}

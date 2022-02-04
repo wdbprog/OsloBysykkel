@@ -1,71 +1,16 @@
 ﻿@page
-@using BikeshareClient.Models
+@using BikeshareClient.Models;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
-@ViewData["serializedData"]
-<style>
-    .marker {
-        /*background-image: url('mapbox-icon.png');*/
-        /*background-image: bi-bicycle;*/
-        background-color: grey;
-        background-size: cover;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
 
-    .mapboxgl-popup {
-        max-width: 200px;
-    }
-
-    .mapboxgl-popup-content {
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-    }
-</style>
 <h3>Map</h3>
 
-<div id='map' style='width: 1000px; height: 400px;'></div>
+<div id='map' class="map"></div>
 <script>
 
-    const geojson1 = {
-      type: 'FeatureCollection',
-      features: [
-        {
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [10.776072,59.911453]
-          },
-          properties: {
-            title: 'Sommerfrydhagen',
-            Address: 'Sommerfrydhagen',
-            capacity: '¨10',
-            DocksAvailable: '200'
-          }
-        },
-        {
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [10.766171,59.923229]
-          },
-          properties: {
-            title: 'Sofienbergparken nord',
-            Address: 'Helgesens Gate 26A',
-            capacity: '50',
-            DocksAvailable: '1000'
-          }
-        }
-      ]
-    };
-
-    const geojson2 = @ViewData["serializedData"];
-    console.log(geojson1);
-    console.log(geojson2);
+    const geojson = @Html.Raw(ViewData["serializedData"]);
 
         mapboxgl.accessToken = 'pk.eyJ1Ijoid2FycmVkYiIsImEiOiJja3o4OHI3cGMwdDM1MnVtdWZpNDlraGoyIn0.pmnqIRMaBQV8V5dKnClK0w';
         var map = new mapboxgl.Map({
@@ -75,11 +20,11 @@
             zoom: 11
         });
 
-    // add markers to map
-    for (const feature of geojson2.features) {
+    // add markers to map from geojson
+    for (const feature of geojson.features) {
         // create a HTML element for each feature
         const el = document.createElement('div');
-        el.className = 'marker bi bi-bicycle';
+        el.className = 'marker';
 
         // make a marker for each feature and add it to the map
         new mapboxgl.Marker(el)
@@ -92,10 +37,11 @@
     }
 </script>
 
+<!--
 <div class="text-center">
     <h1 class="display-4">Oslo Bysykkel</h1>
 
-    <h2>Stations</h2>
+    <h2>Table</h2>
     <table class="table">
         <thead>
             <tr>
@@ -122,4 +68,5 @@
         </tbody>
     </table>
 </div>
+-->
 
