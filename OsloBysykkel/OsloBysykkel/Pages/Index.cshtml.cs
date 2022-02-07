@@ -1,18 +1,14 @@
 ﻿using BikeshareClient;
-using BikeshareClient.Models;
 using GeoJSON.Net.Feature;
 using GeoJSON.Net.Geometry;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
-using System.Configuration;
-using Microsoft.Extensions.Configuration:
 
 namespace OsloBysykkel.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private readonly IConfiguration _configuration;
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -20,24 +16,19 @@ namespace OsloBysykkel.Pages
         }
         public async Task OnGetAsync()
         {
-
-            //get GBFS feed url from settings, otherwise use default
-            var SettingsUrl = _configuration.GetSection("OsloBysykkelSettings").GetSection("URL").Value;
-            var oslobysykkelFeedUrl = SettingsUrl != null ? SettingsUrl : "https://gbfs.urbansharing.com/oslobysykkel.no/gbfs.json";
+            //GBFS feed url, move to appsettings in bigger project
+            var osloBysykkelFeedUrl = "https://gbfs.urbansharing.com/oslobysykkel.no/gbfs.json";
 
             // Create the client from a GBFS API URL.
-            IBikeshareClient client = new Client(oslobysykkelFeedUrl);
+            IBikeshareClient client = new Client(osloBysykkelFeedUrl);
 
             // Get available stations
             var stations = await client.GetStationsAsync();
 
-            // Get statusses of stations
+            // Get statuses of stations
             var statuses = await client.GetStationsStatusAsync();
 
-            //ViewData["Stations"] = stations;
-            //ViewData["Statuses"] = statuses;
-
-            //Combine statusestatuses with stations
+            //Combine statuses with stations
             var stationStatuses = statuses.Join(stations, s => s.Id, s => s.Id, (status, station) => new
             {
                 Station = station,
@@ -63,8 +54,8 @@ namespace OsloBysykkel.Pages
             }
 
             //Serialize GeoJSON
-            var serializedData = JsonConvert.SerializeObject(model);
-            ViewData["serializedData"] = serializedData;
+            var geoJson = JsonConvert.SerializeObject(model);
+            ViewData["GeoJson"] = geoJson;
         }
     }
 }

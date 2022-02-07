@@ -5,12 +5,13 @@
     ViewData["Title"] = "Home page";
 }
 
-<h3>Oslo Bysykkel Map</h3>
+<h2>Oslo Bysykkel Map</h2>
 
+<h4>Select a bike on the map to see availability</h4>
 <div id='map' class="map"></div>
 <script>
 
-    const geojson = @Html.Raw(ViewData["serializedData"]);
+    //init mapbox
     mapboxgl.accessToken = 'pk.eyJ1Ijoid2FycmVkYiIsImEiOiJja3o4OHI3cGMwdDM1MnVtdWZpNDlraGoyIn0.pmnqIRMaBQV8V5dKnClK0w';
     var map = new mapboxgl.Map({
         container: 'map',
@@ -19,9 +20,10 @@
         zoom: 11.5
     });
 
-    // add markers to map from geojson
-    for (const feature of geojson.features) {
-        // create a HTML element for each feature
+    // add markers to map from geoJSON
+    const geoJSON = @Html.Raw(ViewData["GeoJson"]);
+    for (const feature of geoJSON.features) {
+        // create an element for each feature
         const el = document.createElement('div');
         el.className = 'marker fas fa-bicycle';
 
