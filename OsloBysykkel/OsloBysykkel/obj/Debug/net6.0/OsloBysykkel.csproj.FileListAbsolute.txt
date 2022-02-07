@@ -28,3 +28,33 @@ C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\obj\
 C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.pdb
 C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.genruntimeconfig.cache
 C:\Users\wardd\Desktop\Temp_projects\OsloBysykkel\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\GeoJSON.Net.dll
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\appsettings.Development.json
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\appsettings.json
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\OsloBysykkel.staticwebassets.runtime.json
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\OsloBysykkel.exe
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\OsloBysykkel.deps.json
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\OsloBysykkel.runtimeconfig.json
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\OsloBysykkel.dll
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\ref\OsloBysykkel.dll
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\OsloBysykkel.pdb
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\BikeshareClient.dll
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\GeoJSON.Net.dll
+C:\temp projects\OsloBysykkel\OsloBysykkel\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.csproj.AssemblyReference.cache
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.AssemblyInfoInputs.cache
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.AssemblyInfo.cs
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.csproj.CoreCompileInputs.cache
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.MvcApplicationPartsAssemblyInfo.cache
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.RazorAssemblyInfo.cache
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.RazorAssemblyInfo.cs
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\staticwebassets.build.json
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\staticwebassets.development.json
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\scopedcss\bundle\OsloBysykkel.styles.css
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\scopedcss\projectbundle\OsloBysykkel.bundle.scp.css
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.csproj.CopyComplete
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.dll
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\ref\OsloBysykkel.dll
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.pdb
+C:\temp projects\OsloBysykkel\OsloBysykkel\obj\Debug\net6.0\OsloBysykkel.genruntimeconfig.cache

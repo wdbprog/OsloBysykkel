@@ -1,21 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wardd\\Desktop\\Temp_projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj": {}
+    "C:\\temp projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wardd\\Desktop\\Temp_projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj": {
+    "C:\\temp projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wardd\\Desktop\\Temp_projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj",
+        "projectUniqueName": "C:\\temp projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj",
         "projectName": "OsloBysykkel",
-        "projectPath": "C:\\Users\\wardd\\Desktop\\Temp_projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj",
-        "packagesPath": "C:\\Users\\wardd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wardd\\Desktop\\Temp_projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel\\obj\\",
+        "projectPath": "C:\\temp projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj",
+        "packagesPath": "C:\\Users\\wdebecker\\.nuget\\packages\\",
+        "outputPath": "C:\\temp projects\\OsloBysykkel\\OsloBysykkel\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\wardd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\wdebecker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

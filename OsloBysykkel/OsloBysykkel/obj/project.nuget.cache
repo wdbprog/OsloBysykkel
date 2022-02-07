@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/FwXjo6S6UNMBBVnnQ5ipADdWqdxTodysbyJlbw8OGaLl5aLDpti9xtLO+E8jJaF/dA8KxiA7cup5VdjJtjX3A==",
+  "dgSpecHash": "xmJdoDF5U0nLh9NBpAnuZnjy+wgzD+WBi4PYB4hDTvGeojN/crauMul7pDuRilD2xovUKtslp1o8CKOrW0YJzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wardd\\Desktop\\Temp_projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj",
+  "projectFilePath": "C:\\temp projects\\OsloBysykkel\\OsloBysykkel\\OsloBysykkel.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\wardd\\.nuget\\packages\\bikeshareclient\\3.2.5\\bikeshareclient.3.2.5.nupkg.sha512",
-    "C:\\Users\\wardd\\.nuget\\packages\\geojson.net\\1.2.19\\geojson.net.1.2.19.nupkg.sha512",
-    "C:\\Users\\wardd\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\wdebecker\\.nuget\\packages\\bikeshareclient\\3.2.5\\bikeshareclient.3.2.5.nupkg.sha512",
+    "C:\\Users\\wdebecker\\.nuget\\packages\\geojson.net\\1.2.19\\geojson.net.1.2.19.nupkg.sha512",
+    "C:\\Users\\wdebecker\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

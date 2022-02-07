@@ -5,68 +5,39 @@
     ViewData["Title"] = "Home page";
 }
 
-<h3>Map</h3>
+<h3>Oslo Bysykkel Map</h3>
 
 <div id='map' class="map"></div>
 <script>
 
     const geojson = @Html.Raw(ViewData["serializedData"]);
-
-        mapboxgl.accessToken = 'pk.eyJ1Ijoid2FycmVkYiIsImEiOiJja3o4OHI3cGMwdDM1MnVtdWZpNDlraGoyIn0.pmnqIRMaBQV8V5dKnClK0w';
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [10.724801,59.918844],
-            zoom: 11
-        });
+    mapboxgl.accessToken = 'pk.eyJ1Ijoid2FycmVkYiIsImEiOiJja3o4OHI3cGMwdDM1MnVtdWZpNDlraGoyIn0.pmnqIRMaBQV8V5dKnClK0w';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [10.743540765932096,59.929798453700073],
+        zoom: 11.5
+    });
 
     // add markers to map from geojson
     for (const feature of geojson.features) {
         // create a HTML element for each feature
         const el = document.createElement('div');
-        el.className = 'marker';
+        el.className = 'marker fas fa-bicycle';
 
         // make a marker for each feature and add it to the map
         new mapboxgl.Marker(el)
         .setLngLat(feature.geometry.coordinates)
         .setPopup(
             new mapboxgl.Popup({ offset: 25 }) // add popups
-            .setHTML(`<h3>${feature.properties.title}</h3><p>${feature.properties.Address}</br>Capacity:${feature.properties.capacity}</br>Available:${feature.properties.DocksAvailable}</p>`)
+            .setHTML(`<h3>${feature.properties.Title}</h3>
+            <p>${feature.properties.Address}
+            </br>Capacity:${feature.properties.Capacity}
+            </br>Docks Available:${feature.properties.DocksAvailable}
+            </br>Bikes Available:${feature.properties.BikesAvailable}
+            </p>`)
         )
         .addTo(map);
     }
 </script>
-
-<!--
-<div class="text-center">
-    <h1 class="display-4">Oslo Bysykkel</h1>
-
-    <h2>Table</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Latitude</th>
-                <th scope="col">Longitude</th>
-                <th scope="col">Capacity</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var Station in ViewData["Stations"] as IEnumerable<Station>)
-            {
-                <tr>
-                    <th scope="row">@Station.Id</th>
-                    <td>@Station.Name</td>
-                    <td>@Station.Address</td>
-                    <td>@Station.Latitude</td>
-                    <td>@Station.Longitude</td>
-                    <td>@Station.Capacity</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
--->
 

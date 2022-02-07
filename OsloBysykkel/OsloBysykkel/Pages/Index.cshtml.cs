@@ -4,12 +4,15 @@ using GeoJSON.Net.Feature;
 using GeoJSON.Net.Geometry;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using System.Configuration;
+using Microsoft.Extensions.Configuration:
 
 namespace OsloBysykkel.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        private readonly IConfiguration _configuration;
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -17,54 +20,51 @@ namespace OsloBysykkel.Pages
         }
         public async Task OnGetAsync()
         {
-            // Find a GBFS feed url. This one belongs to Los Angeles Metro
-            var oslobysykkelFeedUrl = "https://gbfs.urbansharing.com/oslobysykkel.no/gbfs.json";
+
+            //get GBFS feed url from settings, otherwise use default
+            var SettingsUrl = _configuration.GetSection("OsloBysykkelSettings").GetSection("URL").Value;
+            var oslobysykkelFeedUrl = SettingsUrl != null ? SettingsUrl : "https://gbfs.urbansharing.com/oslobysykkel.no/gbfs.json";
 
             // Create the client from a GBFS API URL.
             IBikeshareClient client = new Client(oslobysykkelFeedUrl);
 
-            // Get available stations, containing name, id, lat, long, address and capacity
+            // Get available stations
             var stations = await client.GetStationsAsync();
 
-            // Get stations status, containing number of bikes and docks available, is renting, is returning etc.
+            // Get statusses of stations
             var statuses = await client.GetStationsStatusAsync();
 
-            ViewData["Stations"] = stations;
-            ViewData["Statuses"] = statuses;
+            //ViewData["Stations"] = stations;
+            //ViewData["Statuses"] = statuses;
 
-
-            var model = new FeatureCollection();
-            foreach (Station station in stations)
+            //Combine statusestatuses with stations
+            var stationStatuses = statuses.Join(stations, s => s.Id, s => s.Id, (status, station) => new
             {
-                var geom = new Point(new Position(station.Latitude, station.Longitude));
+                Station = station,
+                Status = status,
+            }).ToList();
 
+            //create model to generate GeoJSON
+            var model = new FeatureCollection();
+            foreach (var station in stationStatuses)
+            {
+                var geom = new Point(new Position(station.Station.Latitude, station.Station.Longitude));
                 var props = new Dictionary<string, object>
                 {
-                    { "title", station.Name },
-                    { "Address", station.Address},
-                    { "Capacity", station.Capacity},
-                    { "DocksAvailable", "TO FILL"}
+                    { "Title", station.Station.Name },
+                    { "Address", station.Station.Address},
+                    { "Capacity", station.Station.Capacity},
+                    { "DocksAvailable", station.Status.DocksAvailable},
+                    { "BikesAvailable", station.Status.BikesAvailable},
                 };
 
                 var feature = new Feature(geom, props);
                 model.Features.Add(feature);
             }
 
+            //Serialize GeoJSON
             var serializedData = JsonConvert.SerializeObject(model);
             ViewData["serializedData"] = serializedData;
-            /*
-            // combine the station and status information on StationId
-            statuses.Join(stations, s => s.Id, s => s.Id, (status, station) => new
-            {
-                Station = station,
-                Status = status,
-            })
-                .ToList()
-                // Write out some information about the stations
-                .ForEach(x => 
-                    Console.WriteLine($"Station at {x.Station.Name} has {x.Status.BikesAvailable} bikes available and {x.Status.DocksAvailable} docks available")
-                );*/
-            }
-            
+        }
     }
 }

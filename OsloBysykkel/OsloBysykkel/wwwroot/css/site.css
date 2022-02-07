@@ -18,18 +18,16 @@ body {
 }
 
 .map {
-    width: 1000px;
-    height: 400px;
+    width: 85%;
+    height: 60vh;
 }
 .marker {
-    /*background-image: url('mapbox-icon.png');*/
-    /*background-image: bi-bicycle;*/
-    background-color: grey;
-    background-size: cover;
-    width: 15px;
-    height: 15px;
+
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     cursor: pointer;
+    text-align: center;
 }
 
 .mapboxgl-popup {
